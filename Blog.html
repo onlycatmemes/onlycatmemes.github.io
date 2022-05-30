@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<style>
+
+    .topnav {
+      z-index:99;
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      position:fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    
+    .topnav a {
+    
+      float:left;
+      color: #f2f2f2;
+      text-align: center;
+      font-variant:small-caps;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+      transition: all .7s ease-in-out;   
+    }
+    
+    .topnav a:hover {
+      background-color: rgb(26, 66, 86);
+      color: rgb(255, 255, 255);
+    }
+    
+    .topnav a.active {
+      background-color: #4f88ae;
+      color: white;
+      font-variant: small-caps;
+      
+    }
+    
+    .topnav a.title {
+       
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-variant: small-caps;
+        text-shadow: 0px 1px #4f88ae;
+      
+    }
+    .topnav a.title:hover {
+        background-color: #333;
+        cursor: default;
+    }
+    .topnav a.active:hover {
+        cursor: default;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .blogtitle {
+      text-align: center;
+    }
+    .blogtimeline {
+      display:flex;
+      align: left;
+      padding: 0 10% 0 10%;
+    }
+
+
+    </style>
+
+<head>
+  <title>Blog
+  </title>
+  </head>
+
+<div class="topnav">
+    <a class="title"><b>matt clarke</b></a>
+   <a href="#index">Home</a>
+   <a href="#projects">Projects</a>
+   <a href="#contact">Games</a>
+   <a class="active">Blog</a>
+ </div> 
+ <body>
+<div class="blogtitle">
+  <br><br><br>
+  <h3>
+  Timeline of software development journey
+  </h3>
+</div>
+<div class="blogtimeline">
+  <ul>
+    <li>May 20 2022: Begun learning basic HTML and CSS on FreeCodeCamp.org </li><br>
+    <li>May 29 2022: Commenced work on personal website</li>
+</ul>
+</div>
+ 
+   </body>
