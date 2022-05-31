@@ -115,6 +115,20 @@ li a:hover {
   justify-content: center;
   text-align: center;
 }
+.buttons{
+  width: 90px;
+  height: 60px;
+}
+.newg {
+  display:none;
+  justify-content: center;
+  text-align: center;
+}
+.compwins {
+  display:none;
+  justify-content: center;
+  text-align: center;
+}
 </style>
 
 
@@ -134,9 +148,10 @@ li a:hover {
     <ul class="sidenav">
         <li><div class="titl">Available Games</div></li>
         <li><a class="rps">Rock Paper Scissors</a></li>
-        <li><a>More Coming Soon</a></li>
+        <li><a><i>more coming soon</i></a></li>
     </ul>
 </div>
+<div class="compwins" id ="compwins">Computer has won 0 game(s).</div>
 <div class="rock">
     <div class="rocktitle">
         <h1>Rock Paper Scissors</h1>
@@ -144,8 +159,10 @@ li a:hover {
 
     <div class="rockrules">
         <i>You against our most advanced AI.<br><br>
-        First to three wins.</i><br><br>
+  <div id="rockrules">
+        First to 3 wins.</i>
     </div>
+    <br>
 </div>
 
 <div class="rockscore">
@@ -160,7 +177,10 @@ li a:hover {
 </div>
 <br>
 <div id="res" class="rese">
-<button onclick="reset()">Reset</button>
+<button class="buttons" onclick="reset()">Reset</button>
+</div>
+<div id="newga" class="newg">
+<button class="buttons" onclick="newgame()">New Game</button>
 </div>
 
 
