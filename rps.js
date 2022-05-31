@@ -2,11 +2,14 @@ var gameData =
 {
     playscore: 0,
     compscore: 0,
-    playwon: 0,
+    firstto: 0,
     compwon: 0,
     playchoice: 0,
     compchoice: 0,
     compcho:0,
+    wintext:0,
+    winvalue:0,
+
   }
   
   function rock() {
@@ -18,8 +21,26 @@ var gameData =
     if (gameData.compchoice === 1) {
         document.getElementById("roc").style.display = 'block';
         gameData.compcho = 'ROCK';
+        gameData.wintext = 'Tie!';
     } 
-document.getElementById("compcho").innerHTML = 'Computer Chooses: ' + gameData.compcho + gameData.compchoice;
+    else if (gameData.compchoice === 2) {
+        document.getElementById("pap").style.display = 'block';
+        gameData.compcho = 'PAPER';
+        gameData.wintext = 'Lose!';
+        gameData.compscore ++;
+        document.getElementById("compscores").innerHTML = 
+        "Computer's Score:<br><b><h2>" + gameData.compscore;
+        
+    } 
+    else if (gameData.compchoice === 3) {
+        document.getElementById("sci").style.display = 'block';
+        gameData.compcho = 'SCISSORS';
+        gameData.wintext = 'Win!';
+        gameData.playscore ++;
+        document.getElementById("playscores").innerHTML = 
+        "Player's Score:<br><b><h2>" + gameData.playscore;
+    } 
+document.getElementById("compcho").innerHTML = 'Computer Chooses: ' + gameData.compcho + '! You ' + gameData.wintext;
 }
 
   function paper() {
