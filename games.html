@@ -94,6 +94,17 @@ li a:hover {
     justify-content: center;
     text-align: center;
 }
+.images {
+    width: min(20vw, 150px);
+    padding: 0 5vw 0 5vw
+}
+.selection{
+    text-align: center;
+    font-size: 26px;
+}
+.images img :hover{
+  transform: scale(1.1) !important;
+}
 </style>
 
 
@@ -131,10 +142,10 @@ li a:hover {
     <div class="scores"><u>Player's Score:</u><br><b><h2>0</h2></b></div>
     <div class="scores"><u>Computer's Score:</u><br><b><h2>0<h2></b></div>
 </div>
-<h2><center>Make Your Choice</center><h2>
+<div class="selection">Choose one:</div><br>
 <div class="rockgame">
-    <img src="rock.png">
-    <img src="paper.png">
-    <img src="scissors.png">
+    <img class="images" src="rock.png">
+    <img class="images" src="paper.png">
+    <img class="images" src="scissors.png">
 
 </body>
