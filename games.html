@@ -67,10 +67,32 @@ li div {
 
 }
 
-/* Change the link color on hover */
 li a:hover {
   background-color: #888;
   color: white;
+}
+.rocktitle {
+    font-size: min(4vw, 30px);
+    text-align: center;
+}
+.rockrules {
+    text-align: center;
+}
+.rockscore {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 16px;
+}
+.rockscore div{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 0 0;
+    }
+.rockgame {
+    display:flex;
+    justify-content: center;
+    text-align: center;
 }
 </style>
 
@@ -89,8 +111,30 @@ li a:hover {
 
 <div class="sidebar">
     <ul class="sidenav">
-    <li><div class="titl">Available Games</div></li>
-    <li><a class="rps">Rock Paper Scissors</a></li>
-    <li><a>Coming Soon</a></li></ul>
+        <li><div class="titl">Available Games</div></li>
+        <li><a class="rps">Rock Paper Scissors</a></li>
+        <li><a>More Coming Soon</a></li>
+    </ul>
 </div>
+<div class="rock">
+    <div class="rocktitle">
+        <h1>Rock Paper Scissors</h1>
+    </div>
+
+    <div class="rockrules">
+        <i>You against our most advanced AI.<br><br>
+        First to five wins.</i><br>
+    </div>
+</div>
+
+<div class="rockscore">
+    <div class="scores"><u>Player's Score:</u><br><b><h2>0</h2></b></div>
+    <div class="scores"><u>Computer's Score:</u><br><b><h2>0<h2></b></div>
+</div>
+<h2><center>Make Your Choice</center><h2>
+<div class="rockgame">
+    <img src="rock.png">
+    <img src="paper.png">
+    <img src="scissors.png">
+
 </body>
