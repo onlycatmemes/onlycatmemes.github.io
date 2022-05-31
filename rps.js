@@ -8,13 +8,21 @@ var gameData =
     compchoice: 0,
   }
   function rock() {
-rock() style.visibility = 'hidden';
+(roc style.display = 'none');
 paper() style.display = 0;
 scissors() style.display = 0;
   playchoice = 1;
   compchoice = Math.floor((Math.random() * 3) + 1);
-  compcho Text = "Computer chooses";
-
+  document.getElementById.("compcho").innerHTML = "Computer Selects"
+  
+  function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  } 
 function playchoose() {
   }
 
