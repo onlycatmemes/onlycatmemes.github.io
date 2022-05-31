@@ -6,23 +6,30 @@ var gameData =
     compwon: 0,
     playchoice: 0,
     compchoice: 0,
+    compcho:0,
   }
+  
   function rock() {
     document.getElementById("roc").style.display = 'none';
     document.getElementById("pap").style.display = 'none';
     document.getElementById("sci").style.display = 'none';
-    document.getElementById("compcho").innerHTML = 'Computer Chooses: ' + gameData.compscore;
     gameData.playchoice = 1;
     gameData.compchoice = Math.floor((Math.random() * 3) + 1);
-    if (gameData.compchoice = 1) {
-    document.getElementById("roc").style.display = 'block';
+   
+    if (gameData.compchoice === 1) {
+        document.getElementById("roc").style.display = 'block';
+        gameData.compcho = 'ROCK';
+        }
+    else if (gameData.compchoice === 2) {
+        document.getElementById("paper").style.display = 'block';
+        gameData.compcho = 'PAPER';
     }
-    if (gameData.compchoice = 2) {
-    document.getElementById("paper").style.display = 'block';
+    else if (gameData.compchoice === 3) {
+        document.getElementById("scissors").style.display = 'block';
+        gameData.compcho = 'SCISSORS';
     }
-     if (gameData.compchoice = 3) {
-    document.getElementById("scissors").style.display = 'block';
-    }
+document.getElementById("compcho").innerHTML = 'Computer Chooses: ' + gameData.compcho + gameData.compchoice;
+
   }
   function paper() {
     document.getElementById("roc").style.display = 'none';
