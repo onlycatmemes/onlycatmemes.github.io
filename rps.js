@@ -199,7 +199,7 @@ function newgame() {
     "Computer's Score:<br><b><h2>" + gameData.playscore;
     document.getElementById("compwins").style.display = 'block';
     document.getElementById("compwins").innerHTML = "Computer has won " + gameData.compwon + " game(s).";
-    document.getElementById("rockrules").innerHTML = '<i>First to <u>' + gameData.winvalue + '</u> wins.</i>';
+    document.getElementById("rockrules").innerHTML = '<i>First to ' + gameData.winvalue + ' wins.</i>';
 }
 
 
