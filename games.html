@@ -19,8 +19,8 @@
   color: #f2f2f2;
   text-align: center;
   font-variant:small-caps;
-  padding: 10px 16px;
   text-decoration: none;
+  padding: 10px 16px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
   transition: all .7s ease-in-out;   
@@ -40,16 +40,57 @@
 .topnav a.active:hover {
         cursor: default;
 }
+ul {
+  list-style-type: none;
+  margin-top: 39px;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-variant:small-caps;
+}
+li div {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #4f88ae;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-variant:small-caps;
+
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #888;
+  color: white;
+}
 </style>
 
+
 <head>
-  <title>Blog
+  <title>Games
   </title>
   </head>
-
+<body>
 <div class="topnav">
     <a href="index.html">Matt Clarke</a>
-   <a href="projects.html">Projects</a>
-   <a class="active">Games</a>
-   <a href="blog.html">Blog</a>
- </div> 
+    <a href="index.html">Projects</a>
+    <a class="active">Games</a>
+    <a href="blog.html">Blog</a>
+</div> 
+
+<div class="sidebar">
+    <ul class="sidenav">
+    <li><div class="titl">Available Games</div></li>
+    <li><a class="rps">Rock Paper Scissors</a></li>
+    <li><a>Coming Soon</a></li></ul>
+</div>
+</body>
