@@ -58,7 +58,7 @@ function rock() {
         document.getElementById("compcho").innerHTML = 'Computer Chooses: ' + gameData.compcho + '! You ' + gameData.wintext;
         if (gameData.playscore === gameData.winvalue) {
             gameData.winvalue += 2;
-            document.getElementById("rockrules").innerHTML = '<i>First to <u>' + gameData.winvalue + '</u> wins.</i>'
+            document.getElementById("rockrules").innerHTML = '<i>First to ' + gameData.winvalue + ' wins.</i>'
         }
     } 
 }
@@ -107,7 +107,7 @@ function paper() {
         document.getElementById("compcho").innerHTML = 'Computer Chooses: ' + gameData.compcho + '! You ' + gameData.wintext;
         if (gameData.playscore === gameData.winvalue) {
             gameData.winvalue += 2;
-            document.getElementById("rockrules").innerHTML = '<i>First to <u>' + gameData.winvalue + '</u> wins.</i>'
+            document.getElementById("rockrules").innerHTML = '<i>First to ' + gameData.winvalue + ' wins.</i>'
         }
     } 
 }
@@ -155,7 +155,7 @@ function scissors() {
         document.getElementById("compcho").innerHTML = 'Computer Chooses: ' + gameData.compcho + '! You ' + gameData.wintext;
         if (gameData.playscore === gameData.winvalue) {
             gameData.winvalue += 2;
-            document.getElementById("rockrules").innerHTML = '<i>First to <u>' + gameData.winvalue + '</u> wins.</i>'
+            document.getElementById("rockrules").innerHTML = '<i>First to ' + gameData.winvalue + ' wins.</i>'
         }
     } 
 }
