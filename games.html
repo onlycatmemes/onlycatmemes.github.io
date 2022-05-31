@@ -110,6 +110,11 @@ li a:hover {
   border-width: 2px;
   border-radius: 7px;
 }
+.rese {
+  display:none;
+  justify-content: center;
+  text-align: center;
+}
 </style>
 
 
@@ -153,6 +158,12 @@ li a:hover {
   <button id="pap" onclick="paper()"><img class="images" src="paper.png"></button>
     <button id="sci" onclick="scissors()"><img class="images" src="scissors.png"></button>
 </div>
+<br>
+<div id="res" class="rese">
+<button onclick="reset()">Reset</button>
+</div>
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
     <script src="rps.js"></script>
 </body>
