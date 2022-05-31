@@ -8,21 +8,33 @@ var gameData =
     compchoice: 0,
   }
   function rock() {
-(roc style.display = 'none');
-paper() style.display = 0;
-scissors() style.display = 0;
-  playchoice = 1;
-  compchoice = Math.floor((Math.random() * 3) + 1);
-  document.getElementById.("compcho").innerHTML = "Computer Selects"
-  
-  function myFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  } 
+    document.getElementById("roc").style.display = 'none';
+    document.getElementById("pap").style.display = 'none';
+    document.getElementById("sci").style.display = 'none';
+    document.getElementById("compcho").innerHTML = 'Computer Chooses';
+    gameData.playchoice = 1;
+    gameData.compchoice = Math.floor((Math.random() * 3) + 1);
+ 
+  }
+  function paper() {
+    document.getElementById("roc").style.display = 'none';
+    document.getElementById("pap").style.display = 'none';
+    document.getElementById("sci").style.display = 'none';
+    document.getElementById("compcho").innerHTML = 'Computer Chooses';
+    gameData.playchoice = 2;
+    gameData.compchoice = Math.floor((Math.random() * 3) + 1);
+ 
+  }
+  function scissors() {
+    document.getElementById("roc").style.display = 'none';
+    document.getElementById("pap").style.display = 'none';
+    document.getElementById("sci").style.display = 'none';
+    document.getElementById("compcho").innerHTML = 'Computer Chooses';
+    gameData.playchoice = 3;
+    gameData.compchoice = Math.floor((Math.random() * 3) + 1);
+ 
+  }
+
 function playchoose() {
   }
 
