@@ -79,15 +79,16 @@ li a:hover {
     text-align: center;
 }
 .rockscore {
-    display:flex;
+    display: flex;
     justify-content: center;
     text-align: center;
     padding: 10px 16px;
+    column-gap: 10vw;
+
 }
 .rockscore div{
-    width: 100%;
     text-align: center;
-    padding: 20px 0 0 0;
+    padding: 10px 20px 0px 20px;
     }
 .rockgame {
     display:flex;
@@ -102,8 +103,11 @@ li a:hover {
     text-align: center;
     font-size: 26px;
 }
-.images img :hover{
-  transform: scale(1.1) !important;
+.scores{
+
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 7px;
 }
 </style>
 
@@ -134,14 +138,14 @@ li a:hover {
 
     <div class="rockrules">
         <i>You against our most advanced AI.<br><br>
-        First to five wins.</i><br>
+        First to five wins.</i><br><br>
     </div>
 </div>
 
 <div class="rockscore">
-    <div class="scores"><u>Player's Score:</u><br><b><h2>0</h2></b></div>
-    <div class="scores"><u>Computer's Score:</u><br><b><h2>0<h2></b></div>
-</div>
+    <div class="scores">Player's Score:<br><b><h2>0</h2></b></div>
+    <div class="scores">Computer's Score:<br><b><h2>0<h2></b></div>
+</div><br>
 <div class="selection">Choose one:</div><br>
 <div class="rockgame">
     <img class="images" src="rock.png">
