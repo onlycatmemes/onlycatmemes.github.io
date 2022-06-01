@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<style>
+
+.topnav {
+  z-index:99;
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.topnav a {
+
+  float:left;
+  color: #f2f2f2;
+  text-align: center;
+  font-variant:small-caps;
+  text-decoration: none;
+  padding: 10px 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  transition: all .7s ease-in-out;   
+}
+
+.topnav a:hover {
+  background-color: rgb(26, 66, 86);
+  color: rgb(255, 255, 255);
+}
+
+.topnav a.active {
+  background-color: #4f88ae;
+  color: white;
+  font-variant: small-caps;
+  
+}
+.topnav a.active:hover {
+        cursor: default;
+}
+ul {
+  list-style-type: none;
+  margin-top: 39px;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-variant:small-caps;
+}
+li div {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #4f88ae;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-variant:small-caps;
+
+}
+
+li a:hover {
+  background-color: #888;
+  color: white;
+}
+.rocktitle {
+    font-size: min(4vw, 30px);
+    text-align: center;
+}
+.rockrules {
+    text-align: center;
+}
+.rockscore {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 16px;
+    column-gap: 10vw;
+
+}
+.rockscore div{
+    text-align: center;
+    padding: 10px 20px 0px 20px;
+    }
+.rockgame {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+.images {
+    width: min(20vw, 150px);
+    padding: 0 5vw 0 5vw
+}
+.compcho{
+    text-align: center;
+    font-size: 26px;
+}
+.scores{
+
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 7px;
+}
+.rese {
+  display:none;
+  justify-content: center;
+  text-align: center;
+}
+.buttons{
+  width: 90px;
+  height: 60px;
+}
+.newg {
+  display:none;
+  justify-content: center;
+  text-align: center;
+}
+.compwins {
+  display:none;
+  justify-content: center;
+  text-align: center;
+}
+</style>
+
+
+<head>
+  <title>Games
+  </title>
+  </head>
+<body>
+<div class="topnav">
+    <a href="index.html">Matt Clarke</a>
+    <a href="index.html">Projects</a>
+    <a class="active">Games</a>
+    <a href="Blog.html">Blog</a>
+</div> 
+
+<div class="sidebar">
+    <ul class="sidenav">
+        <li><a><i>more coming soon</i></a></li>
+    </ul>
+</div>
+<div class="compwins" id ="compwins">Computer has won 0 game(s).</div>
+<div class="rock">
+    <div class="rocktitle">
+        <h1>Rock Paper Scissors</h1>
+    </div>
+
+    <div class="rockrules">
+        <i>You against our most advanced AI.<br><br>
+  <div id="rockrules">
+        First to 3 wins.</i>
+    </div>
+    <br>
+</div>
+
+<div class="rockscore">
+    <div id="playscores" class="scores">Player's Score:<br><b><h2>0</h2></b></div>
+    <div id="compscores" class="scores">Computer's Score:<br><b><h2>0<h2></b></div>
+</div><br>
+<div class="compcho" id="compcho">Choose one:</div><br>
+<div class="rockgame">
+  <button id="roc" onclick="rock()"><img class="images" src="rock.png"></button>
+  <button id="pap" onclick="paper()"><img class="images" src="paper.png"></button>
+    <button id="sci" onclick="scissors()"><img class="images" src="scissors.png"></button>
+</div>
+<br>
+<div id="res" class="rese">
+<button class="buttons" onclick="reset()">Reset</button>
+</div>
+<div id="newga" class="newg">
+<button class="buttons" onclick="newgame()">New Game</button>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="rps.js"></script>
+</body>
