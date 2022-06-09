@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<style>
+
+.topnav {
+  z-index:99;
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.topnav a {
+
+  float:left;
+  color: #f2f2f2;
+  text-align: center;
+  font-variant:small-caps;
+  text-decoration: none;
+  padding: 10px 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  transition: all .7s ease-in-out;   
+}
+
+.topnav a:hover {
+  background-color: rgb(26, 66, 86);
+  color: rgb(255, 255, 255);
+}
+
+.topnav a.active {
+  background-color: #4f88ae;
+  color: white;
+  font-variant: small-caps;
+  
+}
+.topnav a.active:hover {
+        cursor: default;
+}
+
+.title {
+    font-size: min(4vw, 30px);
+    text-align: center;
+}
+.subtitle {
+    text-align: center;
+}
+.bestdiv {
+    text-align: center;
+    border-style: solid;
+    border-radius: 5px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+.timerdiv{
+    display: flex;
+    justify-content:center;
+}
+.time {
+    text-align: center;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: x-large;
+}
+.button {
+    text-align: center;
+    border-style: solid;
+    background-color: white;
+    border-radius: 5px;
+    padding: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: x-large;
+}
+</style>
+
+
+<head>
+  <title>Games
+  </title>
+  </head>
+<body>
+<div class="topnav">
+    <a href="index.html">Matt Clarke</a>
+    <a href="index.html">Projects</a>
+    <a href="games.html">Games</a>
+    <a href="Blog.html">Blog</a>
+</div> 
+<br>
+<div class="rock">
+    <div class="title">
+        
+        <h1>Stopwatch Game</h1>
+    </div>
+
+    <div class="subtitle">
+        <i>Try to stop the timer with one second remaining.<br><br>
+    <div>
+        Don't go under 1 second.</i>
+    </div>
+    <br><br>
+</div>
+    <div class="bestdiv"><br>Best Time:<br>
+        <div id="besttime"><b><h2>0</h2></b></div>
+    </div>  
+<br>
+<div class="timerdiv">
+    <div class="time">
+05.00
+    </div>
+    <div>
+        <button class="button" onclick="start()">Start</button>
+    </div>
+</div>
+
+</body>
