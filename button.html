@@ -53,8 +53,8 @@
     text-align: center;
     border-style: solid;
     border-radius: 5px;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 .timerdiv{
     display: flex;
@@ -67,6 +67,7 @@
     padding: 50px;
     margin-left: 30px;
     margin-right: 30px;
+    margin-bottom: 30px;
     font-size: x-large;
 }
 .button {
@@ -74,11 +75,16 @@
     border-style: solid;
     background-color: white;
     border-radius: 5px;
-    padding: 50px;
+    box-shadow: 2px 2px;
+    width: 160px;
+    height: 150px;
     margin-left: 30px;
     margin-right: 30px;
+    margin-bottom: 30px;
     font-size: x-large;
 }
+#winner {
+    display: none;
 </style>
 
 
@@ -101,23 +107,24 @@
     </div>
 
     <div class="subtitle">
-        <i>Try to stop the timer with one second remaining.<br><br>
+        <i>Try to stop the timer with exactly one second remaining.<br><br>
     <div>
         Don't go under 1 second.</i>
     </div>
     <br><br>
 </div>
     <div class="bestdiv"><br>Best Time:<br>
-        <div id="besttime"><b><h2>0</h2></b></div>
+        <div id="besttime"><b><h2>0<span id="bestsec">0</span>:<span id="bestten">00</span></h2></b></div>
     </div>  
 <br>
 <div class="timerdiv">
     <div class="time">
-05.00
+<span id="seconds">05</span>:<span id="tens">00</span>
     </div>
     <div>
-        <button class="button" onclick="start()">Start</button>
+        <button id="button-start" class="button">Start</button>
     </div>
 </div>
-
+<div id="winner" class="time"> Nice, you just won! Good Job</div>
+<script src="button.js"></script>
 </body>
