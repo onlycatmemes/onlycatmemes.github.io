@@ -48,6 +48,9 @@ window.onload = function () {
              if (tens < 10){
             bestTen.innerHTML = "0" + bestTens; 
              }
+             if (tens == 0 && seconds == 1) {
+              document.getElementById("winner").style.display = "block"; 
+          }
             clearInterval(Interval);
             return;
             }
