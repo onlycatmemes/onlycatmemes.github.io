@@ -134,7 +134,7 @@ const TEAMS = [
       name: "VGK",
       stats: ["3.37", "2.93", "3.49", "3.07"]
     }, {
-      name: "WAS",
+      name: "WSH",
       stats: ["3.15", "3.1", "3.49", "3.07"]
     }, {
       name: "WPG",
