@@ -11,15 +11,19 @@
     This website will simulate a game between two hockey teams, predicting the winner, the score, and the points that were scored.
 <br><br>Pick two teams to simulate.<br><br>
 Home Team:
-<select name="team1" id="team1">
-    <option value="Edmonton">Edmonton</option>
-    <option value="Colorado">Colorado</option>
+<select name="team1" id="home" onchange="hometeam()" required>
+    <option value="">Select a Team</option>
+    <option value="COL[0,2]">Colorado Avalanche</option>
+    <option value="TBL[0,2]">Tampa Bay Lightning</option>
 </select>
 <br><br>Away Team:
-<select name="team2" id="team2">
-    <option value="Colorado">Colorado</option>
-    <option value="Edmonton">Edmonton</option>
+<select name="team2" id="away" onchange="awayteam()" required>
+    <option value="">Select a Team</option>
+    <option value="COL[1,3]">Colorado Avalanche</option>
+    <option value="TBL[1,3]">Tampa Bay Lightning</option>
 </select>
 <br><br>
-<button id="submit" type="submit">Submit</button>
+<button id="submit" type="submit" onclick="run()">Submit</button>
+<div id="print"></div>
+<script src="hockey.js"></script>
 </body>
