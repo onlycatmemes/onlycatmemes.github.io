@@ -12,7 +12,7 @@ let AT = document.getElementById("away").value;
 console.log(AT);
 }
 */
-let homegf, homega, awaygf, awayga, HT, AT
+let homegf, homega, awaygf, awayga, HT, AT, HOT, AOT
 const TEAMS = [
     {
      name: "ANA",
@@ -182,8 +182,55 @@ const TEAMS = [
           awayG ++;
         }
   }
-  document.getElementById("print").innerHTML = HT + " expected goals: " + (expHG * 60).toFixed(1)
+  document.getElementById("print").innerHTML = HT + " expected goals: " + (expHG * 60).toFixed(1);
   document.getElementById("print1").innerHTML = AT + " expected goals: " + (expAG * 60).toFixed(1);
-  document.getElementById("print2").innerHTML = "Final Score: " 
-  + HT + " :" + homeG + " " + AT + " :" + awayG;
+  document.getElementById("print2").innerHTML = "Final Score: " + HT + " :" + homeG + " " + AT + " :" + awayG;
+  document.getElementById("print3").innerHTML = "";
+
+//overtime
+  if (awayG == homeG) {
+    document.getElementById("print3").innerHTML = "Game went to Overtime.";
+    let expHG = (parseFloat(homegf) + parseFloat(awayga)) / 20 * 1.29;
+    let expAG = (parseFloat(homega) + parseFloat(awaygf)) / 20  * 1.29;
+    console.log(expAG);
+    
+      let rand = Math.random();
+      if (expHG > rand) { 
+        let HOT = 1;
+        console.log(HOT + "home");
+      }
+      let rand2 = Math.random()
+      if (expAG > rand2) { 
+        let AOT = 1;
+        console.log(AOT + "away");
+      }
+      /*if both teams score in loop
+      if (HOT == 1 && AOT == 1) {
+        console.log("ti work");
+        if (rand > rand2) {
+          awayG ++;
+          console.log("tie");
+          document.getElementById("print4").innerHTML = AT + " wins in overtime " + awayG + " to " + homeG;
+          return;
+      }
+      else if (rand < rand2) {
+        homeG ++;
+        document.getElementById("print4").innerHTML = HT + " wins in overtime " + homeG + " to " + awayG;
+        return;
+    }
+  }*/
+      if (HOT > 0 ) {
+        homeG ++;
+        console.log("homewin");
+        document.getElementById("print4").innerHTML = HT + " wins in overtime " + homeG + " to " + awayG;
+      }
+      if (valueOf(AOT) > 0) {
+        awayG ++;
+        console.log("awaywin");
+        document.getElementById("print4").innerHTML = AT + " wins in overtime " + awayG + " to " + homeG;
+      }
+  }
+  
 }
+
+/* add overtime, and shootout */
