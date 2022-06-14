@@ -257,11 +257,11 @@ const TEAMS = [
         }
       }
       if (AOT > HOT) {
-        document.getElementById("print5").innerHTML = AT + " wins in the shootout with " + AOT + " goals, while " + HT + " has " + HOT + " goals";
+        document.getElementById("print5").innerHTML = AT + " wins in the shootout with a score of " + AOT + " to " + HOT + ".";
         return;
       }
       if (AOT < HOT) {
-        document.getElementById("print5").innerHTML = HT + " wins in the shootout with " + HOT + " goals, while " + AT + " has " + AOT + " goals";
+        document.getElementById("print5").innerHTML = HT + " wins in the shootout with a score of  " + HOT + " to " + AOT + ".";
         return;
       }
       if (AOT == HOT)
@@ -280,11 +280,11 @@ const TEAMS = [
           i --;
         }
         if (AOT > HOT) {
-          document.getElementById("print5").innerHTML = AT + " wins in the shootout with " + AOT + " goals, while " + HT + " has " + HOT + " goals";
+          document.getElementById("print5").innerHTML = AT + " wins in the shootout with a score of " + AOT + " to " + HOT + ".";
           return;
         }
         if (AOT < HOT) {
-          document.getElementById("print5").innerHTML = HT + " wins in the shootout with " + HOT + " goals, while " + AT + " has " + AOT + " goals";
+          document.getElementById("print5").innerHTML = HT + " wins in the shootout with a score of  " + HOT + " to " + AOT + ".";
           return;
 
         }
