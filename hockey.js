@@ -12,7 +12,7 @@ let AT = document.getElementById("away").value;
 console.log(AT);
 }
 */
-let homegf, homega, awaygf, awayga, HT, AT, HOT, AOT
+let homegf, homega, awaygf, awayga, HT, AT
 const TEAMS = [
     {
      name: "ANA",
@@ -184,32 +184,38 @@ const TEAMS = [
   }
   document.getElementById("print").innerHTML = HT + " expected goals: " + (expHG * 60).toFixed(1);
   document.getElementById("print1").innerHTML = AT + " expected goals: " + (expAG * 60).toFixed(1);
-  document.getElementById("print2").innerHTML = "Final Score: " + HT + " :" + homeG + " " + AT + " :" + awayG;
+  document.getElementById("print2").innerHTML = "Final Regulation Score: " + HT + ":" + homeG + " " + AT + ":" + awayG;
   document.getElementById("print3").innerHTML = "";
+  document.getElementById("print4").innerHTML = "";
+  document.getElementById("print5").innerHTML = "";
+  let AOT = 0;
+  let HOT = 0;
 
 //overtime
   if (awayG == homeG) {
-    document.getElementById("print3").innerHTML = "Game went to Overtime.";
-    let expHG = (parseFloat(homegf) + parseFloat(awayga)) / 20 * 1.29;
-    let expAG = (parseFloat(homega) + parseFloat(awaygf)) / 20  * 1.29;
-    console.log(expAG);
+    document.getElementById("print3").innerHTML = "Game goes to overtime.";
+    expHG = (parseFloat(homegf) + parseFloat(awayga)) / 15;
+    expAG = (parseFloat(homega) + parseFloat(awaygf)) / 15;
+
     
-      let rand = Math.random();
+      rand = Math.random();
+      console.log(expHG);
+      console.log(expAG);
+      console.log(rand);
       if (expHG > rand) { 
-        let HOT = 1;
-        console.log(HOT + "home");
+        HOT = 1;
       }
       let rand2 = Math.random()
+      console.log(rand2);
       if (expAG > rand2) { 
-        let AOT = 1;
-        console.log(AOT + "away");
+        AOT = 1;
       }
-      /*if both teams score in loop
+      console.log(HOT + "homerandgoal");
+      console.log(AOT + "awayrandgoal");
+      //if both teams score in loop
       if (HOT == 1 && AOT == 1) {
-        console.log("ti work");
         if (rand > rand2) {
           awayG ++;
-          console.log("tie");
           document.getElementById("print4").innerHTML = AT + " wins in overtime " + awayG + " to " + homeG;
           return;
       }
@@ -218,19 +224,72 @@ const TEAMS = [
         document.getElementById("print4").innerHTML = HT + " wins in overtime " + homeG + " to " + awayG;
         return;
     }
-  }*/
+  }
       if (HOT > 0 ) {
         homeG ++;
-        console.log("homewin");
         document.getElementById("print4").innerHTML = HT + " wins in overtime " + homeG + " to " + awayG;
+        console.log(homeonly);
+        return;
       }
-      if (valueOf(AOT) > 0) {
+      if (AOT > 0) {
         awayG ++;
-        console.log("awaywin");
         document.getElementById("print4").innerHTML = AT + " wins in overtime " + awayG + " to " + homeG;
+        console.log(awayonly);
+        return;
       }
-  }
-  
-}
+//shootout
+      else {
+        document.getElementById("print4").innerHTML = "No goals in overtime, game goes to shootout."
+        let expHG = (parseFloat(homegf) + parseFloat(awayga)) / 20;
+        let expAG = (parseFloat(homega) + parseFloat(awaygf)) / 20;
+        HOT = 0;
+        AOT = 0;
+        for (let i = 0; i < 3; i++) {
+          rand = Math.random();
+          if (expHG > rand) { 
+          HOT ++;
+          console.log(HOT + " home");
+          }
+          rand = Math.random();
+          if (expAG > rand) { 
+          AOT ++;
+          console.log(AOT + " away");
+        }
+      }
+      if (AOT > HOT) {
+        document.getElementById("print5").innerHTML = AT + " wins in the shootout with " + AOT + " goals, while " + HT + " has " + HOT + " goals";
+        return;
+      }
+      if (AOT < HOT) {
+        document.getElementById("print5").innerHTML = HT + " wins in the shootout with " + HOT + " goals, while " + AT + " has " + AOT + " goals";
+        return;
+      }
+      if (AOT == HOT)
+      for (let i = 0; i < 3; i++) {
+        rand = Math.random();
+        if (expHG > rand) { 
+        HOT ++;
+        console.log(HOT + " home");
+        }
+        rand = Math.random();
+        if (expAG > rand) { 
+        AOT ++;
+        console.log(AOT + " away");
+        }
+        if (AOT == HOT) {
+          i --;
+        }
+        if (AOT > HOT) {
+          document.getElementById("print5").innerHTML = AT + " wins in the shootout with " + AOT + " goals, while " + HT + " has " + HOT + " goals";
+          return;
+        }
+        if (AOT < HOT) {
+          document.getElementById("print5").innerHTML = HT + " wins in the shootout with " + HOT + " goals, while " + AT + " has " + AOT + " goals";
+          return;
 
+        }
+  }
+}
+}
+  }
 /* add overtime, and shootout */
